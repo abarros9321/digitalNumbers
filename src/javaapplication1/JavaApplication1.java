@@ -13,13 +13,13 @@ import java.io.*;
  */
 public class JavaApplication1 {
 
-    static void print(int mat[][])
+    static void print(int mat[][], String num)
 	{
-	
+	int size = 5 * num.length();
 		// If in matrix row number is even then print "-"
 		// otherwise print "|"
 		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
+			for (int j = 0; j < size; j++) {
 				if (i % 2 == 0) {
 					if (mat[i][j] == 1)
 						System.out.print("-");
@@ -36,7 +36,7 @@ public class JavaApplication1 {
 			System.out.println();
 		}
 	}
-	static void digit0()
+	static int[][] digit0()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -45,9 +45,9 @@ public class JavaApplication1 {
 						{ 0, 0, 0, 0, 0 },
 						{ 1, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit1()
+	static int[][] digit1()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -56,9 +56,9 @@ public class JavaApplication1 {
 						{ 0, 0, 0, 0, 0 },
 						{ 0, 0, 1, 0, 0 },
 						{ 0, 0, 0, 0, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit2()
+	static int[][] digit2()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -67,9 +67,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 1, 0, 0, 0, 0 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit3()
+	static int[][] digit3()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -78,9 +78,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 0, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit4()
+	static int[][] digit4()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -89,9 +89,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 0, 0, 0, 0, 1 },
 						{ 0, 0, 0, 0, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit5()
+	static int[][] digit5()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -100,9 +100,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 0, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit6()
+	static int[][] digit6()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -111,9 +111,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 1, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit7()
+	static int[][] digit7()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -122,9 +122,9 @@ public class JavaApplication1 {
 						{ 0, 0, 0, 0, 0 },
 						{ 0, 0, 0, 0, 1 },
 						{ 0, 0, 0, 0, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit8()
+	static int[][] digit8()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -133,9 +133,9 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 1, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
-	static void digit9()
+	static int[][] digit9()
 	{
 		// In matrix 0 used for space
 		// and 1 for either - or |
@@ -144,62 +144,76 @@ public class JavaApplication1 {
 						{ 0, 1, 0, 1, 0 },
 						{ 0, 0, 0, 0, 1 },
 						{ 0, 1, 0, 1, 0 } };
-		print(mat);
+		return mat;
 	}
 	
 	// Function to check number
-	static void checkDigit(int num)
+	static int[][] checkDigit(int num)
 	{
+            int[][] result = null ;
 		// for digit 0
 		if (num == 0)
-			digit0();
+			result =digit0();
 	
 		// for digit 1
 		else if (num == 1)
-			digit1();
+			result =digit1();
 	
 		// for digit 2
 		else if (num == 2)
-			digit2();
+			result =digit2();
 	
 		// for digit 3
 		else if (num == 3)
-			digit3();
+			result =digit3();
 	
 		// for digit 4
 		else if (num == 4)
-			digit4();
+			result =digit4();
 	
 		// for digit 5
 		else if (num == 5)
-			digit5();
+			result =digit5();
 	
 		// for digit 6
 		else if (num == 6)
-			digit6();
+			result =digit6();
 	
 		// for digit 7
 		else if (num == 7)
-			digit7();
+			result =digit7();
 	
 		// for digit 8
 		else if (num == 8)
-			digit8();
+			result =digit8();
 	
 		// for digit 9
 		else if (num == 9)
-			digit9();
+			result =digit9();
+                
+                return result;
 	}
 	
 	// Driver program
 	public static void main (String[] args) 
 	{
 		// Input a number
-		String num = "9";
+		String num = "234";
+                int size = 5 * num.length();
+                
+                int[][] number = new  int[5][size];
                 for(int i = 0; i<num.length(); i++){
-                    checkDigit(Integer.parseInt(num.substring(i,i+1)));
+                    int[][] digit = checkDigit(Integer.parseInt(num.substring(i,i+1)));
+                    
+                    for(int j =0 ; j<5;j++){
+                        int move = 0;
+                        for(int k=(i)*5; k<((i+1)*5);k++){
+                            number[j][k]=digit[j][move];
+                            move++;
+                        }
+                    }
                 }
-	
+                print(number,num);
 		// function call to check digit
 		
 		
